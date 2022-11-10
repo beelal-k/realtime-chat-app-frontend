@@ -1,0 +1,35 @@
+@use 'global';
+
+.main-chat-friend-bar{
+
+    width:18%;
+    height: 95.78vh;
+    padding: 1%;
+    box-shadow: 5px 0px 20px 0px #1D1D1D;
+    background-color: #2B2B2B;
+    // border: 1px solid red;
+    gap: 11px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    input{
+        border-radius: 5px;
+        padding: 5%;
+        font-size: 15px;
+    }
+    
+}
+
+
+
+.main-chat-top-btns{
+    border: 0;
+    gap: 4%;
+    button{
+        border-radius:5px;
+        padding: 2%;
+        width: 50%;
+        border: 0;
+        background-color: global.$bg-btn-secondary;
+    }
+}
