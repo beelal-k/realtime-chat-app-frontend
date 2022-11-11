@@ -13,7 +13,19 @@ const Friend_bar = () => {
           <button classsName='' title='Friend list'><img src={friendsIcon} /></button>
           <button title="Start a new chat"><img src={newConvoIcon} /></button>
         </div>
-        <div className='friends-bar-friends-list'></div>
+        <div className='friends-bar-friends-list flex-col'>
+          
+          <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+
+          <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+          
+        </div>
         <div className='flex-row bottom-profile'>
           <div className='bottom-profile-image-div'>
             <div className='profile-image'></div>
