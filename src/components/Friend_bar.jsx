@@ -10,8 +10,19 @@ const Friend_bar = () => {
 
         <input type='text' placeholder='Search conversations' className='inputs' />
         <div className='main-chat-top-btns flex-row'>
-          <button classsName=''><img src={friendsIcon} /></button>
-          <button><img src={newConvoIcon} /></button>
+          <button classsName='' title='Friend list'><img src={friendsIcon} /></button>
+          <button title="Start a new chat"><img src={newConvoIcon} /></button>
+        </div>
+        <div className='friends-bar-friends-list'></div>
+        <div className='flex-row bottom-profile'>
+          <div className='bottom-profile-image-div'>
+            <div className='profile-image'></div>
+          </div>
+          <div className='friends-bar-bottom-profile flex-col'>
+            <p>Tina Lopez</p>
+            <button>Settings</button>
+            <button>Logout</button>
+          </div>
         </div>
 
       </section>
