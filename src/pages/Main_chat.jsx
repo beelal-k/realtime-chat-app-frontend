@@ -1,12 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import '../scss/Main_chat.scss'
 import Friend_bar from '../components/Friend_bar';
 import Member_bar from '../components/Member_bar';
 import addMemberIcon from '../images/addMember.svg'
 import addAttachment from '../images/addAttachment.svg'
 import emojiIcon from '../images/emojiIcon.svg'
+import socketIO from 'socket.io-client'
 
 const Main_chat = () => {
+
+    const [text, setText] = useState();
+
+    const socket = socketIO;
+
+    const enterHandler = useRef();
+    let sendInputField;
+
+    useEffect(() => {
+        socket.connect('http://localhost:8080')
+        
+        sendInputField = enterHandler.current;
+        
+    }, [])
+    
+    
+    sendInputField.addEventListener('keydown', (e) => {
+        console.log(e.target.value)
+    })
+    
+    
+    
+    const send_message = () => {
+
+        // console.log(text)
+        // socket.emit('message', text)
+    }
+
     return (
         <>
             <div className='main-chat flex-row'>
@@ -57,7 +86,7 @@ const Main_chat = () => {
                     </div>
                     <div className='chat-input-box flex-row'>
                         <img src={addAttachment} />
-                        <input type='text' placeholder='Send a message' />
+                        <input type='text' placeholder='Send a message' id='sendMessageInput' ref={enterHandler} onChange={(e) => setText(e.target.value)} />
                         <img src={emojiIcon} />
 
                     </div>
