@@ -19,6 +19,14 @@ const Member_bar = () => {
                         <div className='members-bar-member-image'></div>
                         <p>Tina Lopez</p>
                     </div>
+                    <div className='flex-row members-bar-member-template'>
+                        <div className='members-bar-member-image'></div>
+                        <p>Tina Lopez</p>
+                    </div>
+                    <div className='flex-row members-bar-member-template'>
+                        <div className='members-bar-member-image'></div>
+                        <p>Tina Lopez</p>
+                    </div>
 
                 </div>
                 <h6>OFFLINE USERS</h6>

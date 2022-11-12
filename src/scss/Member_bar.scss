@@ -3,8 +3,10 @@
 .main-chat-member-bar {
 
     width: 17%;
-    height: 95.78vh;
+    height: 100vh;
     padding: 1%;
+    padding-bottom: 0;
+    padding-top: 0;
     background-color: #2B2B2B;
     color: global.$bg-btn-color-secondary;
     // border: 1px solid red;
@@ -66,7 +68,15 @@
     gap: 10px;
     // overflow-y: scroll;
 }
+.main-chat-member-bar::-webkit-scrollbar{
+    width: 10px;    
 
+}
+
+.main-chat-member-bar::-webkit-scrollbar-thumb{
+    background-color: #171717;
+    border-radius: 10px;
+}
 .members-bar-member-template:hover {
     background-color: #363636;
     transition: 0.1s ease-in-out;

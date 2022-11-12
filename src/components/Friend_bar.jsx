@@ -24,7 +24,42 @@ const Friend_bar = () => {
             <div className='friends-bar-friend-image'></div>
             <p>Tina Lopez</p>
           </div>
-          
+          <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
+           <div className='flex-row friends-bar-friend-template'>
+            <div className='friends-bar-friend-image'></div>
+            <p>Tina Lopez</p>
+          </div>
         </div>
         <div className='flex-row bottom-profile'>
           <div className='bottom-profile-image-div'>

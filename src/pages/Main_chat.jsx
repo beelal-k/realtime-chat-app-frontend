@@ -40,6 +40,20 @@ const Main_chat = () => {
                                 <p>This is yet another message from tina lopez.</p>
                             </div>
                         </div>
+                        <div className='flex-row main-chat-message'>
+                            <div className='chat-profile-image'></div>
+                            <div className='flex-col chat-message-text'>
+                                <p className='chat-sender-name'>Tina Lopez</p>
+                                <p>This is yet another message from tina lopez.</p>
+                            </div>
+                        </div>
+                        <div className='flex-row main-chat-message'>
+                            <div className='chat-profile-image'></div>
+                            <div className='flex-col chat-message-text'>
+                                <p className='chat-sender-name'>Tina Lopez</p>
+                                <p>This is yet another message from tina lopez.</p>
+                            </div>
+                        </div>
                     </div>
                     <div className='chat-input-box flex-row'>
                         <img src={addAttachment} />
