@@ -5,36 +5,38 @@ import Member_bar from '../components/Member_bar';
 import addMemberIcon from '../images/addMember.svg'
 import addAttachment from '../images/addAttachment.svg'
 import emojiIcon from '../images/emojiIcon.svg'
-import socketIO from 'socket.io-client'
+import io from 'socket.io-client'
 
 const Main_chat = () => {
 
     const [text, setText] = useState();
 
-    const socket = socketIO;
+    const socket = io.connect('http://localhost:8080');
 
     const enterHandler = useRef();
-    let sendInputField;
+    let user_input;
 
     useEffect(() => {
-        socket.connect('http://localhost:8080')
-        
-        sendInputField = enterHandler.current;
-        
-    }, [])
-    
-    
-    sendInputField.addEventListener('keydown', (e) => {
-        console.log(e.target.value)
-    })
-    
-    
-    
-    const send_message = () => {
 
-        // console.log(text)
-        // socket.emit('message', text)
-    }
+        user_input = enterHandler.current;
+        user_input.addEventListener('keydown', (e) => {
+            if (e.code === 'Enter') {
+                send_message();
+            }
+        })
+        const send_message = () => {
+
+            socket.emit('send-message', text)
+            // console.log('hello world')
+            // socketIO.on('message', text)
+        }
+
+    }, [socket])
+
+
+
+
+
 
     return (
         <>
