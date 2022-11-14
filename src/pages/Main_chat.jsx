@@ -13,29 +13,34 @@ const Main_chat = () => {
     // const [receivedMessage, setReceivedMessage] = useState()
 
     const socket = io.connect('http://localhost:8080');
-
+    
     const send_message = () => {
-
+        
         socket.emit('send-message', text)
-
+        
     }
+    
 
     useEffect(() => {
+    //    const sock = socket.connect('http://localhost:8080');
 
         socket.on('receive-message', (data) => {
             const text_template = document.createElement('div');
+            
+            // WROTE 'class' IN INNERHTML BECAUSE AFTER COMPILATION JSX WILL TRANSLATE TO HTML
             text_template.innerHTML = `
-                    <div className='flex-row main-chat-message'>
-                         <div className='chat-profile-image'></div>
-                             <div className='flex-col chat-message-text'>
-                                 <p className='chat-sender-name'>Tina Lopez</p>
+                    <div class='flex-row main-chat-message'>
+                         <div class='chat-profile-image'></div>
+                             <div class='flex-col chat-message-text'>
+                                 <p class='chat-sender-name'>Tina Lopez</p>
                                  <p>${data}</p>
                              </div>
                        </div>`
-            document.getElementById('main-chat').appendChild(text_template);
 
+            document.getElementById('main-chat').appendChild(text_template);
+            document.getElementById('sendMessageInput').value = '';            
         })
-    }, [socket])
+    }, [])
 
     return (
 
@@ -97,7 +102,7 @@ const Main_chat = () => {
                     </div>
                     <div className='chat-input-box flex-row'>
                         <img src={addAttachment} />
-                        <input type='text' placeholder='Send a message' id='sendMessageInput' onKeyDown={(e) => e.code === 'Enter' ? send_message() : null} onChange={(e) => setText(e.target.value)} />
+                        <input type='text' placeholder='Send a message' autoComplete='off' id='sendMessageInput' onKeyDown={(e) => e.keyCode === 13 ? send_message(): null} onChange={(e) => setText(e.target.value)} />
                         <img src={emojiIcon} />
 
                     </div>

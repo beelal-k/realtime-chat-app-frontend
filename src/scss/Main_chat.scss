@@ -123,7 +123,7 @@
 }
 
 .main-chat-page::-webkit-scrollbar{
-    width: 5px;    
+    width: 10px;    
 
 }
 
@@ -152,6 +152,7 @@
 
     color: global.$bg-btn-primary;
     font-size: 15px;
+    // flex-wrap: wrap;
 
     p {
         margin: 0;
